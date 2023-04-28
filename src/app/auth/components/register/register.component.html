@@ -1,0 +1,87 @@
+<div class="register">
+  <div class="text-center registhead">
+    <h2>Register</h2>
+  </div>
+
+  <form [formGroup]="registerForm">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="userName">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="ex@email.com">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label> Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label> Confirm Password</mat-label>
+          <input matInput type="password" formControlName="confirmPassword">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="text-right registfoot">
+      <a routerLink="/login" color="primary">Already Have Account</a>
+      <button mat-raised-button color="warn"
+        [disabled]="registerForm.invalid || (registerForm.value.password !== registerForm.value.confirmPassword)">Create
+        Account</button>
+    </div>
+  </form>
+</div>
+
+
+<!-- <div class="register">
+  <div class="text-center registhead">
+    Register
+  </div>
+
+  <form [formGroup]="registerForm">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>User Name</mat-label>
+          <input type="text" matInput formArrayName="userName">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formArrayName="email">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formArrayName="password">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Confirm Password</mat-label>
+          <input type="password" matInput formArrayName="confirmPassword">
+        </mat-form-field>
+      </div>
+      <div class="text-center registfoot">
+        <a routerLink="/login" color="primary">Already have account?</a>
+        <button mat-raised-button color="warn" [disabled]="registerForm.invalid||(registerForm.value.password !== registerForm.value.confirmPassword)" (click)="submit()">Create Account</button>
+      </div>
+    </div>
+  </form>
+
+</div> -->

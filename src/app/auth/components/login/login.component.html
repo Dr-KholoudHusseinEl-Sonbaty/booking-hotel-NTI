@@ -1,0 +1,28 @@
+<div class="login">
+  <div class="text-center loginhead">
+    <h2> Login</h2>
+  </div>
+
+  <form [formGroup]="loginForm">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div class="d-flex align-items-baseline justify-content-between loginfooter">
+        <a routerLink="/register" color="primary">Create Account</a>
+        <button mat-raised-button color="warn">Login</button>
+      </div>
+    </div>
+  </form>
+</div>
